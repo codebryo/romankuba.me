@@ -1,5 +1,5 @@
 {
-  "name": "rkme",
+  "name": "romankuba.me",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.11.5",
     "@astrojs/check": "^0.8.0",
-    "typescript": "^5.5.3"
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vue": "^4.5.0",
+    "astro": "^4.11.5",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.3",
+    "vue": "^3.4.31"
   }
 }
