@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    import { computed, ref, onMounted, watch } from 'vue';
     import { useMouseInElement, templateRef } from '@vueuse/core';
 
     const { title } = defineProps<{ title: string }>();
@@ -51,15 +50,3 @@
         </div>
     </div>
 </template>
-
-<style>
-    .bg-circle-gradient {
-        background: radial-gradient(
-            circle,
-            rgba(242, 255, 126, 1) 0%,
-            rgba(255, 255, 255, 1) 35%,
-            rgba(127, 188, 242, 1) 68%,
-            rgba(139, 92, 246, 1) 92%
-        );
-    }
-</style>
