@@ -1,13 +1,14 @@
 <script setup lang="ts">
     import { useMouseInElement, templateRef } from '@vueuse/core';
+    import ArrowRight from './icons/ArrowRight.vue';
 
     const { title } = defineProps<{ title: string }>();
     const target = templateRef<HTMLElement | null>('target');
 
     const { x, y, isOutside } = useMouseInElement(target);
 
-    function resetStyle(e) {
-        e.target.style = '';
+    function resetStyle() {
+        if (target.value) target.value.style.removeProperty('transform');
     }
 
     function handleMouseMove(e) {
@@ -16,17 +17,17 @@
         const { left, top, width, height } =
             target.value.getBoundingClientRect();
 
-        const localX = (x.value - left - width / 2) / 25;
-        const localY = (y.value - top - height / 2) / 25;
+        const localX = (x.value - left - width / 2) / 10;
+        const localY = (y.value - top - height / 2) / 30;
 
-        e.target.style.transform = `rotateY(${localX}deg) rotateX(${localY}deg)`;
+        target.value.style.transform = `rotateY(${localX}deg) rotateX(${localY}deg)`;
     }
 </script>
 
 <template>
-    <div style="perspective: 300px" class="group">
+    <div style="perspective: 1000px">
         <div
-            class="p-0.5 rounded bg-none hover:bg-teal-400 transition duration-300 ease-linear transform-gpu"
+            class="p-0.5 rounded bg-none hover:bg-teal-400 transition duration-200 ease-linear transform-gpu group w-full"
             @mouseleave="resetStyle"
             @mousemove="handleMouseMove"
             ref="target"
@@ -43,8 +44,8 @@
                     <a
                         href="#goto"
                         class="text-inherit group-hover:text-teal-500 underline-offset-4 no-underline group-hover:underline"
-                        >Go there</a
-                    >
+                        ><ArrowRight class="inline-block mr-2" />Go there
+                    </a>
                 </div>
             </div>
         </div>
