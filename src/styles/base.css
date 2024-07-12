@@ -11,7 +11,7 @@
                 rgb(var(--accent)),
                 rgb(var(--accent-light)) 30%,
                 white 60%);
-        --global-bg: #190838;
+        --global-bg: #07151b;
         --global-color: #f0f0f0;
     }
 
@@ -28,7 +28,6 @@
         width: 800px;
         max-width: calc(100% - 2rem);
         color: white;
-        font-size: 20px;
         line-height: 1.6;
     }
 
@@ -41,6 +40,6 @@
     }
 
     a {
-        @apply underline text-purple-500
+        @apply underline text-orange-400 underline-offset-4
     }
 }
