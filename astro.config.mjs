@@ -9,6 +9,10 @@ export default defineConfig({
         tailwind({
             applyBaseStyles: false,
         }),
-        vue(),
+        vue({
+            script: {
+                propsDestructure: true,
+            },
+        }),
     ],
 });

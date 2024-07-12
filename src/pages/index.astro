@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Card from '../components/Card.vue';
 ---
 
 <Layout title="Welcome">
@@ -11,6 +11,12 @@ import Card from '../components/Card.astro';
         awesome stuff. There's a full section about myself.
     </p>
     <a href="/about">About me</a>
+
+    <div class="flex">
+        <Card client:load title="Managers Toolkit">
+            Here's a short description
+        </Card>
+    </div>
 </Layout>
 
 <style>
