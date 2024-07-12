@@ -4,27 +4,40 @@ import Card from '../components/Card.vue';
 ---
 
 <Layout title="Welcome">
-    <h1>Hi, I'm <span class="text-gradient">Roman</span></h1>
+    <h1 class="mt-16 mb-8">
+        Hi, I'm <span
+            class="bg-clip-text text-transparent bg-gradient-to-tr from-teal-400 via-orange-400 to-violet-200"
+            >Roman</span
+        >
+    </h1>
 
-    <p>
+    <p class="">
         I'm a part-time-nerd, merging product and engineering knowledge to build
         awesome stuff. There's a full section about myself.
+        <a href="/about">About me</a>
     </p>
-    <a href="/about">About me</a>
 
-    <div class="flex">
+    <h2 class="mt-8">You can find me here:</h2>
+
+    <ul>
+        <li>LinkedIn: ...</li>
+        <li>Fediverse: ...</li>
+        <li>Github: ...</li>
+    </ul>
+
+    <h2 class="mt-8">I also make some stuff</h2>
+
+    <div class="grid grid-cols-2 gap-4 mt-8">
+        <Card client:load title="Managers Toolkit">
+            Here's a short description
+        </Card>
+
+        <Card client:load title="Managers Toolkit">
+            Here's a short description
+        </Card>
+
         <Card client:load title="Managers Toolkit">
             Here's a short description
         </Card>
     </div>
 </Layout>
-
-<style>
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
-</style>
