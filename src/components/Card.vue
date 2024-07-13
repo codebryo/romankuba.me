@@ -2,7 +2,7 @@
     import { useMouseInElement, templateRef } from '@vueuse/core';
     import ArrowRight from './icons/ArrowRight.vue';
 
-    const { title } = defineProps<{ title: string }>();
+    const { title, link } = defineProps<{ title: string; link: string }>();
     const target = templateRef<HTMLElement | null>('target');
 
     const { x, y, isOutside } = useMouseInElement(target);
@@ -42,9 +42,11 @@
                     </p>
 
                     <a
-                        href="#goto"
-                        class="text-inherit group-hover:text-teal-500 underline-offset-4 no-underline group-hover:underline"
-                        ><ArrowRight class="inline-block mr-2" />Go there
+                        class="text-inherit group-hover:text-teal-500 underline-offset-4 no-underline group-hover:underline group/link"
+                        :href="link"
+                        ><ArrowRight
+                            class="inline-block mr-2 group-hover/link:mr-1 transition-all"
+                        />Go there
                     </a>
                 </div>
             </div>
