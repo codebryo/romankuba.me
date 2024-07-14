@@ -40,6 +40,6 @@
     }
 
     a {
-        @apply underline text-orange-400 underline-offset-4
+        @apply underline text-orange-400 underline-offset-4 hover:text-teal-500 transition-colors
     }
 }
