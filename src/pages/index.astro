@@ -1,6 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.vue';
+import IconExternal from '../components/icons/External.vue';
+
+const socials = [
+    {
+        key: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/romankuba/',
+        text: 'in/romankuba',
+    },
+    {
+        key: 'Fediverse',
+        href: 'https://hachyderm.io/@codebryo',
+        text: 'hachyderm.io/@codebryo',
+    },
+    {
+        key: 'Github',
+        href: 'https://github.com/codebryo',
+        text: '@codebryo',
+    },
+];
 ---
 
 <Layout title="Welcome">
@@ -11,21 +30,42 @@ import Card from '../components/Card.vue';
         >
     </h1>
 
-    <p class="">
-        I'm a part-time-nerd, merging product and engineering knowledge to build
-        awesome stuff. There's a full section about myself.
-        <a href="/about">About me</a>
-    </p>
+    <div class="flex gap-4 items-center">
+        <img
+            src="/profile.jpeg"
+            alt="It's a me, Roman!"
+            class="rounded-full border border-teal-900 size-20 transition-all duration-500 cursor-grab shadow-lg
+             hover:shadow-teal-500 shadow-orange-400"
+        />
+
+        <p>
+            I'm a part-time-nerd, merging product and engineering knowledge to
+            build awesome stuff. There's a whole page
+            <a href="/about">about myself</a> and why it's <em>awesome</em> to work
+            with me.
+        </p>
+    </div>
 
     <h2 class="mt-8">You can find me here:</h2>
 
     <ul>
-        <li>LinkedIn: ...</li>
-        <li>Fediverse: ...</li>
-        <li>Github: ...</li>
+        {
+            socials.map((social) => (
+                <li>
+                    {social.key}:
+                    <a href={social.href} target="_blank">
+                        {social.text} <IconExternal class="inline" />
+                    </a>
+                </li>
+            ))
+        }
     </ul>
 
     <h2 class="mt-8">I also make some stuff</h2>
+
+    <div class="rounded bg-white bg-opacity-5 p-2 mt-8">
+        ❗ All links will be working soon. Just wrapping up a few things.
+    </div>
 
     <div class="grid grid-cols-2 gap-4 mt-8">
         <Card client:load title="Nerdwerk" link="#nerdwerk">

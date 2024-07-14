@@ -17,8 +17,8 @@
         const { left, top, width, height } =
             target.value.getBoundingClientRect();
 
-        const localX = (x.value - left - width / 2) / 10;
-        const localY = (y.value - top - height / 2) / 30;
+        const localX = (x.value - left - width / 2) / 20;
+        const localY = (y.value - top - height / 2) / 10;
 
         target.value.style.transform = `rotateY(${localX}deg) rotateX(${localY}deg)`;
     }
@@ -36,8 +36,10 @@
                 class="rounded p-4 bg-black cursor-default hover:bg-gray-900 text-gray-500 group-hover:text-white"
             >
                 <div>
-                    <span class="text-xl font-bold">{{ title }}</span>
-                    <p class="text-sm">
+                    <span class="text-xl font-bold block pb-2">{{
+                        title
+                    }}</span>
+                    <p class="text-sm italic">
                         <slot />
                     </p>
 
