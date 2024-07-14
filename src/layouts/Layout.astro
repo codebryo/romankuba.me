@@ -1,9 +1,10 @@
 ---
 interface Props {
     title: string;
+    frontmatter?: object;
 }
 
-const { title } = Astro.props;
+const { title, frontmatter } = Astro.props;
 import('../styles/base.css');
 ---
 
@@ -15,7 +16,7 @@ import('../styles/base.css');
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>{title} | romankuba.me</title>
+        <title>{title || frontmatter.title} | romankuba.me</title>
     </head>
     <body>
         <main>
