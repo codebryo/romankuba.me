@@ -1,7 +1,7 @@
 ---
 interface Props {
     title: string;
-    frontmatter?: { [key: string]: any };
+    frontmatter?: { title: string; [key: string]: any };
 }
 
 const { title, frontmatter } = Astro.props;
