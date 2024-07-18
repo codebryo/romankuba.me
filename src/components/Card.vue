@@ -46,6 +46,7 @@
                     <a
                         class="text-inherit group-hover:text-teal-500 underline-offset-4 no-underline group-hover:underline group/link"
                         :href="link"
+                        target="_blank"
                         ><ArrowRight
                             class="inline-block mr-2 group-hover/link:mr-1 transition-all"
                         />Go there
