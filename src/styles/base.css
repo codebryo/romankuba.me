@@ -22,7 +22,7 @@
         color: var(--global-color);
     }
 
-    main {
+    main, footer {
         margin: auto;
         padding: 1rem;
         width: 800px;

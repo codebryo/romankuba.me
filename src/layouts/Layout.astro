@@ -25,5 +25,26 @@ import('../styles/base.css');
         <main>
             <slot />
         </main>
+
+        <footer
+            class="flex content-evenly border-t border-dashed border-teal-950 mt-16 py-8 hover:border-teal-900 transition-colors"
+        >
+            <div class="grow-0 w-1/6 text-gray-500">
+                No Cookies, no tracking!
+            </div>
+            <div class="grow text-center">
+                Built with ❤️, <a href="https://astro.build/" target="_blank"
+                    >Astro</a
+                >, <a href="https://vuejs.org/" target="_blank">Vue</a> and <a
+                    href="https://tailwindcss.com/"
+                    target="_blank">Tailwind</a
+                >.
+                <br />
+                Hosted on <a href="https://www.netlify.com/" target="_blank"
+                    >Netlify</a
+                >
+            </div>
+            <div class="grow-0 w-1/6 text-right text-gray-500">&copy; 2024</div>
+        </footer>
     </body>
 </html>
