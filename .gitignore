@@ -1,5 +1,8 @@
 # build output
-dist/
+.output
+.vercel
+/.svelte-kit
+/build
 
 # generated types
 .astro/
@@ -13,12 +16,19 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# environment variables
+# Env
 .env
-.env.production
+.env.*
+!.env.example
+!.env.test
 
 # macOS-specific files
 .DS_Store
+Thumbs.db
 
 # jetbrains setting folder
 .idea/
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
