@@ -3,22 +3,6 @@
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<meta charset="UTF-8" />
-	<meta
-		name="description"
-		content="Personal website of Roman Kuba, Engineering and Product Leader from Austria"
-	/>
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/png" href="/favicon.png" />
-
-	<script
-		defer
-		src="https://cloud.umami.is/script.js"
-		data-website-id="39b1b35a-e8c4-483a-ad25-263ac0a53e4d"
-	></script>
-</svelte:head>
-
 <main>
 	{@render children()}
 </main>

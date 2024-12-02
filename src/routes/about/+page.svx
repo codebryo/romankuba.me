@@ -1,10 +1,14 @@
 ---
-    title: About me
 ---
 
 <script>
     import Header from '$lib/components/Header.svelte'
 </script>
+
+<svelte:head>
+	<title>About | romankuba.me</title>
+</svelte:head>
+
 
 <Header/>
 

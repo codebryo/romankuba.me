@@ -22,6 +22,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Hello @ romankuba.me</title>
+</svelte:head>
+
 <h1 class="mb-8 mt-16">
 	Hi, I'm <span class="gradient-text">Roman</span>
 </h1>
