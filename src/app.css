@@ -3,61 +3,67 @@
 @tailwind utilities;
 
 @layer base {
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-		--global-bg: #07151b;
-		--global-color: #f0f0f0;
-	}
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%
+        );
+        --global-bg: #07151b;
+        --global-color: #f0f0f0;
+    }
 
-	html {
-		font-family: system-ui, sans-serif;
-		background: var(--global-bg);
-		background-size: 224px;
-		color: var(--global-color);
-	}
+    html {
+        font-family: system-ui, sans-serif;
+        background: var(--global-bg);
+        background-size: 224px;
+        color: var(--global-color);
+    }
 
-	main,
-	footer {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		line-height: 1.6;
-	}
+    main,
+    footer {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        line-height: 1.6;
+    }
 
-	h1 {
-		@apply text-4xl font-bold;
-	}
+    h1 {
+        @apply text-4xl font-bold;
+    }
 
-	h2 {
-		@apply text-2xl font-bold;
-	}
+    h2 {
+        @apply text-2xl font-bold;
+    }
 
-	a {
-		@apply text-orange-400 underline underline-offset-4 transition-colors hover:text-teal-500;
-	}
+    a {
+        @apply text-orange-400 underline underline-offset-4 transition-colors hover:text-teal-500;
+    }
 }
 
 @layer components {
-	.gradient-text {
-		@apply bg-gradient-to-tr from-teal-400 via-orange-400 to-violet-200 bg-clip-text text-transparent;
-	}
+    .gradient-text {
+        @apply bg-gradient-to-tr from-teal-400 via-orange-400 to-violet-200 bg-clip-text text-transparent;
+    }
 
-	.separator {
-		background-image: url('/line.svg');
-		@apply my-16 h-4 bg-repeat-x;
-	}
+    .separator {
+        background-image: url('/line.svg');
+        @apply my-16 h-4 bg-repeat-x;
+    }
 
-	.separator:hover {
-		background-image: url('/line-hover.svg');
-	}
+    .separator:hover {
+        background-image: url('/line-hover.svg');
+    }
+
+    .cursor-cool {
+        cursor:
+            url('/cursor.svg') 33 31,
+            auto;
+    }
 }
