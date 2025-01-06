@@ -49,15 +49,20 @@
 
 <h2 class="mt-8">You can find me here:</h2>
 
+
+{#snippet network(social)}
+<li>
+	{social.key}:
+	<a href={social.href} target="_blank" class="cursor-cool">
+		{social.text}
+		<IconExternal class="inline" />
+	</a>
+</li>
+{/snippet}
+
 <ul>
 	{#each socials as social}
-		<li>
-			{social.key}:
-			<a href={social.href} target="_blank" class="cursor-cool">
-				{social.text}
-				<IconExternal class="inline" />
-			</a>
-		</li>
+		{@render network(social)}
 	{/each}
 </ul>
 
