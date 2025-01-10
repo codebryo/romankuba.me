@@ -1,7 +1,7 @@
 <script>
-	import { formatDate } from '$lib/formatDate';
+	import formatDate from '$lib/formatDate';
 
-	/** @type {{ data: {posts: Array<import('$lib/types').Post>} }} */
+	/** @type {{ data: { posts: import('$lib/types').Posts } }} */
 	let { data } = $props();
 	const posts = data.posts;
 </script>
@@ -10,7 +10,7 @@
 
 <p>List all the posts</p>
 
-{#snippet article(post)}
+{#snippet article(/** @type {import('$lib/types').Post} */ post)}
 	<article>
 		<h2>{post.title}</h2>
 		<p>{formatDate(post.date)}</p>
