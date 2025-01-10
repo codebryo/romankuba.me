@@ -2,7 +2,7 @@
 export async function load({ fetch }) {
 	const response = await fetch('api/posts');
 
-	/** @type {Array<import('$lib/types').Post>} */
+	/** @type {import('$lib/types').Posts} */
 	const posts = await response.json();
 	return { posts };
 }
