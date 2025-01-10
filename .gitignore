@@ -4,9 +4,6 @@
 /.svelte-kit
 /build
 
-# generated types
-.astro/
-
 # dependencies
 node_modules/
 
