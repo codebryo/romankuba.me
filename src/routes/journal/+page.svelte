@@ -1,14 +1,13 @@
 <script>
-	import formatDate from '$lib/formatDate';
+	import { formatDate } from '$lib/utils';
+	import Header from '$lib/components/Header.svelte';
 
 	/** @type {{ data: { posts: import('$lib/types').Posts } }} */
 	let { data } = $props();
 	const posts = data.posts;
 </script>
 
-<h1>Journal</h1>
-
-<p>List all the posts</p>
+<Header>Roman's <span class="gradient-text">Journal</span></Header>
 
 {#snippet article(/** @type {import('$lib/types').Post} */ post)}
 	<article>

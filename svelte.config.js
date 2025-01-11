@@ -1,9 +1,24 @@
 import adapter from '@sveltejs/adapter-netlify';
-import { mdsvex } from 'mdsvex';
+import { mdsvex, escapeSvelte } from 'mdsvex';
+import { createHighlighter } from 'shiki'; // cspell:disable-line
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const mdsvexOptions = {
-	extensions: ['.md']
+	extensions: ['.md'],
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			const highlighter = await createHighlighter({
+				themes: ['catppuccin-frappe'], // cspell:disable-line
+				langs: ['javascript', 'typescript', 'dotenv', 'shellscript', 'json']
+			});
+			await highlighter.loadLanguage('javascript', 'typescript');
+			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'catppuccin-frappe' })); // cspell:disable-line
+			return `{@html \`${html}\` }`;
+		}
+	},
+	layout: {
+		_: './src/mdsvex.svelte'
+	}
 };
 
 /** @type {import('@sveltejs/kit').Config} */

@@ -41,8 +41,9 @@
 	<p>
 		I'm a part-time-nerd, merging product and engineering knowledge to build awesome stuff. There's
 		a whole page
-		<a href="/about" class="cursor-cool">about myself</a> and why it's <em>awesome</em> to work with
-		me.
+		<a href="/about" class="cursor-cool">about myself</a> and why you <em>should want</em> to work
+		with me. I'm also writing about various topics in my
+		<a href="/journal" class="cursor-cool">journal</a>.
 	</p>
 </div>
 
