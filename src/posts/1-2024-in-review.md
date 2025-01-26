@@ -32,7 +32,7 @@ Over the course of three months, I update my diet (I also tried out some new stu
 
 My trainer did not push me, but supported me on the path forward. I lost over 10kg sustainably in 3 months, and felt better than I had in years. I am able to pretty much keep that weight since then and am now continuing what I started. Looking back, I am super happy at what I did, and that I started to invest in my self again.
 
-Here's also a link to my trainer. Absolutely check out Julian. He's a great person to work with. You'll find him here <a href="https://julian-fuernholzer.at/" target="_blank">julian-fuernholzer.at</a>
+Here's also a link to my trainer. Absolutely check out Julian. He's a great person to work with. You'll find him here [julian-fuernholzer.at](https://julian-fuernholzer.at/).
 
 ## Some Lows 😿
 
@@ -50,7 +50,7 @@ Later that year, I also quit the job there. Was probably the best decision, espe
 
 ### A new Job
 
-At [Swat.io](https://swat.id) I got the opportunity to start as Head of Product. I wanted to switch to a product focused role for quite some time. When this opportunity came up, I had to take it. (I will share more about my application in the future)
+At [Swat.io](https://swat.io) I got the opportunity to start as Head of Product. I wanted to switch to a product focused role for quite some time. When this opportunity came up, I had to take it. (I will share more about my application in the future)
 
 One thing that stands out to me today is, when I got sick during my first week already (got Covid) I was incredibly frustrated. I wanted to show my best, and have a strong start. But I just could not.
 

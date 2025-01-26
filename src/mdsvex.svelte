@@ -1,6 +1,6 @@
 <script module>
-	import { img } from '$lib/components/custom';
-	export { img };
+	import { img, a } from '$lib/components/custom';
+	export { img, a };
 </script>
 
 <script>
