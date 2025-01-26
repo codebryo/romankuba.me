@@ -17,6 +17,6 @@
 			<br />
 			Hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 		</div>
-		<div class="w-1/6 grow-0 text-right text-gray-500">&copy; 2024</div>
+		<div class="w-1/6 grow-0 text-right text-gray-500">&copy; 2025</div>
 	</div>
 </footer>

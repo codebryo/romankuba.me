@@ -41,7 +41,9 @@
 	<p>
 		I'm a part-time-nerd, merging product and engineering knowledge to build awesome stuff. There's
 		a whole page
-		<a href="/about">about myself</a> and why it's <em>awesome</em> to work with me.
+		<a href="/about" class="cursor-cool">about myself</a> and why you <em>should want</em> to work
+		with me. I'm also writing about various topics in my
+		<a href="/journal" class="cursor-cool">journal</a>.
 	</p>
 </div>
 
@@ -49,15 +51,19 @@
 
 <h2 class="mt-8">You can find me here:</h2>
 
+{#snippet network(social)}
+	<li>
+		{social.key}:
+		<a href={social.href} target="_blank" class="cursor-cool">
+			{social.text}
+			<IconExternal class="inline" />
+		</a>
+	</li>
+{/snippet}
+
 <ul>
 	{#each socials as social}
-		<li>
-			{social.key}:
-			<a href={social.href} target="_blank">
-				{social.text}
-				<IconExternal class="inline" />
-			</a>
-		</li>
+		{@render network(social)}
 	{/each}
 </ul>
 

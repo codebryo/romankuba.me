@@ -60,4 +60,14 @@
 	.separator:hover {
 		background-image: url('/line-hover.svg');
 	}
+
+	.cursor-cool {
+		cursor:
+			url('/cursor.svg') 33 31,
+			auto;
+	}
+
+	.prose-links {
+		@apply prose-a:cursor-cool prose-a:text-orange-400;
+	}
 }
