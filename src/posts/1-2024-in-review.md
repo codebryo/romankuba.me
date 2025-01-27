@@ -78,6 +78,6 @@ I'm someone caring a lot for what I eat, and I also eat mostly vegetarian. So th
 
 I'm likely late to the party on this one (pun intended), but love the content here. Simply great DJing and a wide variety of styles on display. Some days I just have some sets running in the background while working. Can recommend!
 
-## Ready to the next year
+## Ready into the next year
 
 Thanks for reading. I am personally very pumped and excited for the new year. I'll try to give it my best on and off screen, and already look forward to what I'll be saying about this year in retrospect.
