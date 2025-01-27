@@ -1,7 +1,18 @@
 <script lang="ts">
 	import '../app.css';
 	let { children } = $props();
+	import { building } from '$app/environment';
 </script>
+
+<svelte:head>
+	{#if building}
+		<script
+			defer
+			src="https://cloud.umami.is/script.js"
+			data-website-id="39b1b35a-e8c4-483a-ad25-263ac0a53e4d"
+		></script>
+	{/if}
+</svelte:head>
 
 <main>
 	{@render children()}
