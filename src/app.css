@@ -1,6 +1,49 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility gradient-text {
+  @apply bg-linear-to-tr from-teal-400 via-orange-400 to-violet-200 bg-clip-text text-transparent;
+}
+
+@utility separator {
+  background-image: url('/line.svg');
+  @apply my-16 h-4 bg-repeat-x;
+
+  &:hover {
+    background-image: url('/line-hover.svg');
+  }
+}
+
+@utility cursor-cool {
+  cursor:
+    url('/cursor.svg') 33 31,
+    auto;
+}
+
+@utility prose-links {
+  @apply prose-a:cursor-cool prose-a:text-orange-400;
+}
 
 @layer base {
 	:root {
@@ -44,30 +87,5 @@
 
 	a {
 		@apply text-orange-400 underline underline-offset-4 transition-colors hover:text-teal-500;
-	}
-}
-
-@layer components {
-	.gradient-text {
-		@apply bg-gradient-to-tr from-teal-400 via-orange-400 to-violet-200 bg-clip-text text-transparent;
-	}
-
-	.separator {
-		background-image: url('/line.svg');
-		@apply my-16 h-4 bg-repeat-x;
-	}
-
-	.separator:hover {
-		background-image: url('/line-hover.svg');
-	}
-
-	.cursor-cool {
-		cursor:
-			url('/cursor.svg') 33 31,
-			auto;
-	}
-
-	.prose-links {
-		@apply prose-a:cursor-cool prose-a:text-orange-400;
 	}
 }

@@ -5,10 +5,10 @@
 
 <div style="perspective: 1000px">
 	<div
-		class="group w-full transform-gpu rounded bg-none p-0.5 transition duration-200 ease-linear hover:bg-teal-400"
+		class="group w-full transform-gpu rounded-sm bg-none p-0.5 transition duration-200 ease-linear hover:bg-teal-400"
 	>
 		<div
-			class="cursor-default rounded bg-black p-4 text-gray-500 hover:bg-gray-900 group-hover:text-white"
+			class="cursor-default rounded-sm bg-black p-4 text-gray-500 hover:bg-gray-900 group-hover:text-white"
 		>
 			<div>
 				<span class="block pb-2 text-xl font-bold">{title}</span>
