@@ -1,11 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 	let { children } = $props();
-	import { building } from '$app/environment';
+	import { dev } from '$app/environment';
 </script>
 
 <svelte:head>
-	{#if building}
+	{#if !dev}
 		<script
 			defer
 			src="https://cloud.umami.is/script.js"
