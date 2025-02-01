@@ -19,7 +19,6 @@ fs.readdirSync('src/posts').forEach((file) => {
 			const lines = wordwrap(attributes.title, 20).split('\n');
 			const ogSvg = svg(lines);
 
-			console.log(ogSvg);
 			const resvg = new Resvg(ogSvg, {
 				fitTo: {
 					mode: 'width',
@@ -30,7 +29,7 @@ fs.readdirSync('src/posts').forEach((file) => {
 			const pngData = resvg.render();
 			const pngBuffer = pngData.asPng();
 
-			fs.writeFileSync(`static/${file}.png`, pngBuffer);
+			fs.writeFileSync(`static/og/${file}.png`, pngBuffer);
 		});
 	}
 });
