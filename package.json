@@ -4,6 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
+		"build:og": "node scripts/createOgImages.js",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
@@ -33,7 +34,9 @@
 		"vite": "^5.0.3"
 	},
 	"dependencies": {
+		"@resvg/resvg-js": "^2.6.2",
 		"@tailwindcss/typography": "^0.5.15",
+		"front-matter": "^4.0.2",
 		"shiki": "^1.26.1"
 	}
 }
