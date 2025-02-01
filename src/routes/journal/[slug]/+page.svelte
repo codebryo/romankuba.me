@@ -14,7 +14,7 @@
 	<hgroup class="mb-8">
 		<h1>{data.meta.title}</h1>
 		<p
-			class="text-sm italic text-slate-500
+			class="text-sm text-slate-500 italic
 		"
 		>
 			Published at {formatDate(data.meta.date)}
@@ -28,7 +28,7 @@
 		{/each}
 	</div>
 
-	<div class="prose-links prose prose-lg prose-slate pt-8 dark:prose-invert">
+	<div class="prose-links prose prose-lg prose-slate dark:prose-invert pt-8">
 		<data.content />
 	</div>
 </article>

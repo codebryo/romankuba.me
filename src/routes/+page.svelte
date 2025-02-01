@@ -26,7 +26,7 @@
 	<title>Hello @ romankuba.me</title>
 </svelte:head>
 
-<h1 class="mb-8 mt-16">
+<h1 class="mt-16 mb-8">
 	Hi, I'm <span class="gradient-text">Roman</span>
 </h1>
 
@@ -67,7 +67,7 @@
 	{/each}
 </ul>
 
-<h2 class="mb-4 mt-8">I also make some stuff:</h2>
+<h2 class="mt-8 mb-4">I also make some stuff:</h2>
 
 <Card
 	title="Managers Toolkit"
