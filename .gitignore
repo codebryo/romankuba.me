@@ -1,6 +1,7 @@
 # build output
 .output
 .vercel
+.netlify
 /.svelte-kit
 /build
 
