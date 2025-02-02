@@ -16,7 +16,7 @@ fs.readdirSync('src/posts').forEach((file) => {
 		fs.readFile(`src/posts/${file}`, 'utf8', function (err, data) {
 			const attributes = fm(data).attributes;
 
-			const lines = wordwrap(attributes.title, 20).split('\n');
+			const lines = wordwrap(attributes.title, 16).split('\n');
 			const ogSvg = svg(lines);
 
 			const resvg = new Resvg(ogSvg, {
@@ -28,8 +28,9 @@ fs.readdirSync('src/posts').forEach((file) => {
 
 			const pngData = resvg.render();
 			const pngBuffer = pngData.asPng();
+			const filename = file.replace('.md', '');
 
-			fs.writeFileSync(`static/og/${file}.png`, pngBuffer);
+			fs.writeFileSync(`static/og/${filename}.png`, pngBuffer);
 		});
 	}
 });
