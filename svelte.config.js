@@ -9,9 +9,16 @@ const mdsvexOptions = {
 		highlighter: async (code, lang = 'text') => {
 			const highlighter = await createHighlighter({
 				themes: ['catppuccin-frappe'], // cspell:disable-line
-				langs: ['javascript', 'typescript', 'dotenv', 'shellscript', 'json']
+				langs: ['javascript', 'typescript', 'dotenv', 'shellscript', 'json', 'html']
 			});
-			await highlighter.loadLanguage('javascript', 'typescript');
+			await highlighter.loadLanguage(
+				'javascript',
+				'typescript',
+				'dotenv',
+				'shellscript',
+				'json',
+				'html'
+			);
 			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'catppuccin-frappe' })); // cspell:disable-line
 			return `{@html \`${html}\` }`;
 		}
