@@ -16,7 +16,7 @@ fs.readdirSync('src/posts').forEach((file) => {
 		fs.readFile(`src/posts/${file}`, 'utf8', function (err, data) {
 			const attributes = fm(data).attributes;
 
-			const lines = wordwrap(attributes.title, 16).split('\n');
+			const lines = wordwrap(attributes.title, 14).split('\n');
 			const ogSvg = svg(lines);
 
 			const resvg = new Resvg(ogSvg, {
