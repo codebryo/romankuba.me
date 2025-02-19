@@ -1221,6 +1221,13 @@ esrap@^1.3.2:
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.15"
 
+esrap@^1.4.3:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/esrap/-/esrap-1.4.5.tgz#45469ad75773fd948d0eb190c2677e4807ba2483"
+  integrity sha512-CjNMjkBWWZeHn+VX+gS8YvFwJ5+NDhg8aWZBSFJPR8qQduDNjbJodA2WcwCm7uQa5Rjqj+nZvVmceg1RbHFB9g==
+  dependencies:
+    "@jridgewell/sourcemap-codec" "^1.4.15"
+
 esrecurse@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/esrecurse/-/esrecurse-4.3.0.tgz#7ad7964d679abb28bee72cec63758b1c5d2c9921"
@@ -1983,6 +1990,13 @@ svelte-eslint-parser@^0.43.0:
     postcss "^8.4.39"
     postcss-scss "^4.0.9"
 
+svelte-youtube-embed@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/svelte-youtube-embed/-/svelte-youtube-embed-0.4.4.tgz#044ef3ca0bec28021eca067a2548ab8a0fb37b48"
+  integrity sha512-1F22KeU30xwbfdZcosLlJOkp8YKG9+FHGus4ChxVeIxih/TQKYS4bhGyufr4Kv9zBzP0zKrF5mNyW5hLyfksKQ==
+  dependencies:
+    svelte "^5.15.0"
+
 svelte@^5.0.0:
   version "5.16.3"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.16.3.tgz#34a5002e358fef9e31c7cd0d9f4bd1cad69a8596"
@@ -1998,6 +2012,26 @@ svelte@^5.0.0:
     clsx "^2.1.1"
     esm-env "^1.2.1"
     esrap "^1.3.2"
+    is-reference "^3.0.3"
+    locate-character "^3.0.0"
+    magic-string "^0.30.11"
+    zimmerframe "^1.1.2"
+
+svelte@^5.15.0:
+  version "5.20.2"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.20.2.tgz#b08c003e982a32c588dcbbf24c1ac8606c0654dd"
+  integrity sha512-aYXJreNUiyTob0QOzRZeBXZMGeFZDch6SrSRV8QTncZb6zj0O3BEdUzPpojuHQ1pTvk+KX7I6rZCXPUf8pTPxA==
+  dependencies:
+    "@ampproject/remapping" "^2.3.0"
+    "@jridgewell/sourcemap-codec" "^1.5.0"
+    "@types/estree" "^1.0.5"
+    acorn "^8.12.1"
+    acorn-typescript "^1.4.13"
+    aria-query "^5.3.1"
+    axobject-query "^4.1.0"
+    clsx "^2.1.1"
+    esm-env "^1.2.1"
+    esrap "^1.4.3"
     is-reference "^3.0.3"
     locate-character "^3.0.0"
     magic-string "^0.30.11"

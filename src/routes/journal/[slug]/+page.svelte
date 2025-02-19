@@ -2,9 +2,11 @@
 	import { formatDate } from '$lib/utils';
 	import { page } from '$app/state';
 
-	const ogPath = `${page.url.origin}/og/${page.url.pathname.replace('/journal/', '')}.png`;
-
 	let { data } = $props();
+	
+	const ogPath = data.meta.og 
+		? data.meta.og 
+		: `${page.url.origin}/og/${page.url.pathname.replace('/journal/', '')}.png`;
 </script>
 
 <svelte:head>
