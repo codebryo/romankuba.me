@@ -19,9 +19,9 @@
 </p>
 
 {#snippet article(/** @type {import('$lib/types').Post} */ post)}
-	<article>
+	<article class="mb-8">
 		<h2>{post.title}</h2>
-		<p class="text-sm italic text-slate-500">{formatDate(post.date)}</p>
+		<p class="text-sm text-slate-500 italic">{formatDate(post.date)}</p>
 		<p>{post.description}</p>
 		<a href="/journal/{post.slug}">Read the article</a>
 	</article>

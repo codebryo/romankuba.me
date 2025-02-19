@@ -3,9 +3,9 @@
 	import { page } from '$app/state';
 
 	let { data } = $props();
-	
-	const ogPath = data.meta.og 
-		? data.meta.og 
+
+	const ogPath = data.meta.og
+		? data.meta.og
 		: `${page.url.origin}/og/${page.url.pathname.replace('/journal/', '')}.png`;
 </script>
 
@@ -21,7 +21,7 @@
 
 <article class="mt-16">
 	<hgroup class="mb-8">
-		<h1>{data.meta.title}</h1>
+		<h1 class="mb-2 text-6xl">{data.meta.title}</h1>
 		<p class="text-sm text-slate-500 italic">
 			Published at {formatDate(data.meta.date)}
 		</p>

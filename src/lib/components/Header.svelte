@@ -13,8 +13,8 @@
 	<li><a href={route} class={{ 'text-slate-500': isActiveRoute(route) }}>{text}</a></li>
 {/snippet}
 
-<header class="mb-8 mt-16">
-	<h1>
+<header class="mt-16 mb-8">
+	<h1 class="text-6xl">
 		{@render children()}
 	</h1>
 	<nav class="flex list-none gap-4 pt-4">
