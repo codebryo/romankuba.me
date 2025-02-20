@@ -12,6 +12,15 @@ published: true
   import Youtube from "svelte-youtube-embed";
 </script>
 
+This is my shot at making an active contribution to the political discourse in Europe. I recorded it as a video, but you'll find the whole text below. I only start to dabble in more political topics over the last couple months, so making this video was a challenge.
+But if it makes a positive impact on one person I am happy I did it.
+
+<Youtube id="_x3EFC6oJuc" />
+
+---
+
+# The Letter
+
 Dear People and Leaders of Europe and the European Union, it’s time to wake up.
 
 It’s time to fight for the future of this unique and wonderful anomaly called Europe. A place that, regardless of diverse cultures crammed together in a small geographical area and centuries of conflict, has found a way to unite.
@@ -112,9 +121,3 @@ But it’s better to experience inconvenience now than to sit there in the futur
 - Stand up for what is right.
 
 It will be worth it.
-
----
-
-I even made a video of this one here, and if it makes a positive impact on one person I am happy I did it.
-
-<Youtube id="_x3EFC6oJuc" />
