@@ -5,7 +5,7 @@
 	let { data } = $props();
 
 	const ogPath = data.meta.og
-		? data.meta.og
+		? `${page.url.origin}/og/custom/${data.meta.og}`
 		: `${page.url.origin}/og/${page.url.pathname.replace('/journal/', '')}.png`;
 </script>
 
