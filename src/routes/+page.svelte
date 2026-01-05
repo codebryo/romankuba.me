@@ -26,56 +26,29 @@
 	<title>Hello @ romankuba.me</title>
 </svelte:head>
 
-<h1 class="mt-16 mb-8">
-	Hi, I'm <span class="gradient-text">Roman</span>
+<h1 class="my-16 text-8xl">
+	Hi, I'm<span class="title pl-8 text-amber-100">Roman</span>
 </h1>
 
-<div class="flex items-center gap-4">
-	<img
-		src={Profile}
-		alt="It's a me, Roman!"
-		class="size-20 cursor-grab rounded-full border border-teal-900 shadow-lg shadow-orange-400 transition-all
-             duration-500 hover:shadow-teal-500"
-	/>
+<p>
+	I'm a part-time-nerd, merging product and engineering knowledge to build awesome stuff. I'm
+	building <a href="https://nerdwerk.com" target="_blank">nerdwerk.com</a> as professional brand. During
+	my career I've had the opportunity to work with global companies, do quite some public speaking and
+	teaching, and during my work in tech startups I was able to help raise millions. I offer consulting
+	for product and engineering teams, and love to chat about processes and tech.
+</p>
+<p>
+	This page here, is my personal one. I'll use it as outlet to write about personal stuff. Things
+	for me to remembers, things I want to share with anyone who's interested. Also as a portfolio of
+	sorts and memory box about bigger ambitions and goals.
+</p>
 
-	<p>
-		I'm a part-time-nerd, merging product and engineering knowledge to build awesome stuff. There's
-		a whole page
-		<a href="/about" class="cursor-cool">about myself</a> and why you <em>should want</em> to work
-		with me. I'm also writing about various topics in my
-		<a href="/journal" class="cursor-cool">journal</a>.
-	</p>
+<div class="separator"></div>
+
+<div>
+	<img src={Profile} alt="Picture of Roman KUBA" class="mx-auto size-44 rounded-full grayscale" />
 </div>
 
-<div class="separator fill-orange-400"></div>
+<div class="separator"></div>
 
-<h2 class="mt-8">You can find me here:</h2>
-
-{#snippet network(social)}
-	<li>
-		{social.key}:
-		<a href={social.href} target="_blank" class="cursor-cool">
-			{social.text}
-			<IconExternal class="inline" />
-		</a>
-	</li>
-{/snippet}
-
-<ul>
-	{#each socials as social}
-		{@render network(social)}
-	{/each}
-</ul>
-
-<h2 class="mt-8 mb-4">I also make some stuff:</h2>
-
-<Card
-	title="Managers Toolkit"
-	link="https://romankuba.notion.site/The-Managers-Toolkit-a8b21cf95d424c06b4dfe3e54f2c6694"
->
-	Free content, templates, tips and tricks for engineering & product Managers.
-</Card>
-
-<Card title="Snel" link="https://snel.space">
-	Every page deserves a CMS. Snel is simple and great for developers.
-</Card>
+<p>Want to read some stuff? Check out my <a href="/journal">journal</a>.</p>

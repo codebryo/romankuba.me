@@ -21,8 +21,8 @@
 
 <article class="mt-16">
 	<hgroup class="mb-8">
-		<h1 class="mb-2 text-6xl">{data.meta.title}</h1>
-		<p class="text-sm text-slate-500 italic">
+		<h1 class="mb-2 text-8xl">{data.meta.title}</h1>
+		<p class="text-sm text-amber-100 italic">
 			Published at {formatDate(data.meta.date)}
 		</p>
 	</hgroup>
@@ -30,11 +30,20 @@
 	<div class="flex gap-4">
 		<a href="/journal" class="cursor-cool">All Posts</a>
 		{#each data.meta.categories as category}
-			<span class="text-orange-400">&num;{category}</span>
+			<span class="text-teal-200">&num;{category}</span>
 		{/each}
 	</div>
 
-	<div class="prose-links prose prose-lg prose-slate dark:prose-invert pt-8">
+	<div class="prose-links prose prose-neutral prose-2xl pt-8 text-white">
 		<data.content />
 	</div>
 </article>
+
+<style>
+	@reference "../../../app.css";
+
+	.prose {
+		--tw-prose-bold: #fff;
+		--tw-prose-headings: var(--color-yellow-100);
+	}
+</style>

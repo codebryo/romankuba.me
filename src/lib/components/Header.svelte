@@ -13,13 +13,10 @@
 	<li><a href={route} class={{ 'text-slate-500': isActiveRoute(route) }}>{text}</a></li>
 {/snippet}
 
+<a href="/" class="absolute top-10 left-10">&lt; Home</a>
+
 <header class="mt-16 mb-8">
-	<h1 class="text-6xl">
+	<h1 class="text-8xl">
 		{@render children()}
 	</h1>
-	<nav class="flex list-none gap-4 pt-4">
-		{@render link('/', 'Home')}
-		{@render link('/about', 'About')}
-		{@render link('/journal', 'Journal')}
-	</nav>
 </header>
