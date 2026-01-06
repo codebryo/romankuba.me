@@ -1,12 +1,16 @@
-<script>
+<script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import { page } from '$app/state';
+	import BskyThread from './BskyThread.svelte';
 
 	let { data } = $props();
 
 	const ogPath = data.meta.og
 		? `${page.url.origin}/og/custom/${data.meta.og}`
 		: `${page.url.origin}/og/${page.url.pathname.replace('/journal/', '')}.png`;
+
+	const bskyUrl = data.bsky.url;
+	const bskyThread = data.bsky.thread;
 </script>
 
 <svelte:head>
@@ -38,6 +42,10 @@
 		<data.content />
 	</div>
 </article>
+
+{#if bskyThread && bskyUrl}
+	<BskyThread thread={bskyThread} url={bskyUrl} />
+{/if}
 
 <style>
 	@reference "../../../app.css";
