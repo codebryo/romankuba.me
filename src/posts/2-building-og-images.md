@@ -5,6 +5,7 @@ date: '2025-2-6'
 categories:
   - tech
   - tutorial
+og: 2-building-og-images.png
 published: true
 ---
 

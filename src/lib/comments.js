@@ -49,6 +49,7 @@ export async function fetchBskyThread(fetch, postId = null) {
 	const bskyUri = toBskyUriFromPostId(postId);
 
 	const thread = await fetchFromBsky(fetch, bskyUri);
+	if (!thread || typeof thread !== 'object' || !('thread' in thread)) return null;
 	return thread.thread;
 }
 

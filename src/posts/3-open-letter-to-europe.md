@@ -4,7 +4,7 @@ description: I grew up — believing in democracy. Believing that every vote and
 date: '2025-2-19'
 categories:
   - personal
-og: open-letter.png
+og: 3-open-letter-to-europe.png
 published: true
 ---
 

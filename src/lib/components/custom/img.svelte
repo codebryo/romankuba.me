@@ -1,5 +1,5 @@
 <script>
-	/** @type {{ data: {src: string, alt: string} }} */
+	/** @type {{ src: string; alt: string }} */
 	let { src, alt } = $props();
 </script>
 

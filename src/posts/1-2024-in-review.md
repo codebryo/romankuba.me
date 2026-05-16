@@ -4,6 +4,7 @@ description: Last year was a challenging one for me. I want to highlight some gr
 date: '2025-1-26'
 categories:
   - personal
+og: 1-2024-in-review.png
 published: true
 ---
 

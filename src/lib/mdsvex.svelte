@@ -4,7 +4,7 @@
 </script>
 
 <script>
-	let props = $props();
+	let { children } = $props();
 </script>
 
-{@render props.children?.()}
+{@render children?.()}

@@ -2,7 +2,7 @@
 	/** @type {{ href: string, children: import('svelte').Snippet }} */
 	let { href, children } = $props();
 
-	const isExternal = href.startsWith('http');
+	const isExternal = $derived(href.startsWith('http'));
 </script>
 
 <a

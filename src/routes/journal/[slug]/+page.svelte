@@ -2,11 +2,18 @@
 	import { formatDate } from '$lib/utils';
 	import { page } from '$app/state';
 
-	let { data } = $props();
+	let {
+		data
+	}: {
+		data: {
+			content: import('svelte').SvelteComponent;
+			meta: import('$lib/types').PostMetadata;
+		};
+	} = $props();
 
-	const ogPath = data.meta.og
-		? `${page.url.origin}/og/custom/${data.meta.og}`
-		: `${page.url.origin}/og/${page.url.pathname.replace('/journal/', '')}.png`;
+	const ogPath = $derived(
+		data.meta.og ? `${page.url.origin}/og/${data.meta.og}` : `${page.url.origin}/og/default.png`
+	);
 </script>
 
 <svelte:head>

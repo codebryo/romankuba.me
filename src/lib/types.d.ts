@@ -1,12 +1,14 @@
-export type Categories = 'personal' | 'dev';
-
-export type Post = {
+export type PostMetadata = {
 	title: string;
-	slug: string;
 	description: string;
 	date: string;
-	categories: Categories[];
+	categories: string[];
 	published: boolean;
+	og?: string;
+};
+
+export type Post = PostMetadata & {
+	slug: string;
 };
 
 export type Posts = Post[];

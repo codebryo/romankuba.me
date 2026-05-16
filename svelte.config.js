@@ -35,7 +35,7 @@ const mdsvexOptions = {
 		}
 	},
 	layout: {
-		_: 'src/mdsvex.svelte'
+		_: 'src/lib/mdsvex.svelte'
 	}
 };
 

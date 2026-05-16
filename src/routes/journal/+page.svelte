@@ -3,7 +3,7 @@
 
 	/** @type {{ data: { posts: import('$lib/types').Posts } }} */
 	let { data } = $props();
-	const posts = data.posts;
+	const posts = $derived(data.posts);
 </script>
 
 <header class="mb-10">

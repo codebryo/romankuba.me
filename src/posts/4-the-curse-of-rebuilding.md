@@ -4,7 +4,7 @@ description: This is a small page, with very little content. Yet I rebuilt it ag
 date: '2026-5-16'
 categories:
   - personal
-og: cursed.png
+og: 4-the-curse-of-rebuilding.png
 published: true
 ---
 
