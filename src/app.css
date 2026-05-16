@@ -14,92 +14,46 @@
 	}
 }
 
-@keyframes slide {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 100% 0;
-	}
-}
-
-@utility separator {
-	background-image: url('/line.svg');
-	@apply my-16 h-4 cursor-wait bg-repeat-x;
-
-	&:hover {
-		background-image: url('/line-hover.svg');
-		animation: slide 12s linear infinite;
-	}
-}
-
-@utility cursor-cool {
-	cursor:
-		url('/cursor.svg') 33 31,
-		auto;
-}
-
-.title {
-	font-family: 'Berkshire Swash', handwriting;
-}
-
-@utility prose-links {
-	@apply prose-a:cursor-cool;
-}
-
 @layer base {
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-		--global-bg: #eb8c44;
-		--global-color: #fff;
+		color-scheme: dark;
 	}
 
 	html {
-		font-family: system-ui, sans-serif;
-		background: var(--global-bg);
-		background-size: 224px;
-		color: var(--global-color);
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			'Helvetica Neue',
+			Arial,
+			'Noto Sans',
+			'Liberation Sans',
+			sans-serif;
+		background:
+			radial-gradient(900px 600px at 15% 10%, rgba(124, 58, 237, 0.18), transparent 55%),
+			radial-gradient(900px 600px at 85% 25%, rgba(14, 165, 233, 0.12), transparent 55%),
+			radial-gradient(900px 600px at 55% 85%, rgba(16, 185, 129, 0.1), transparent 55%), #0b0d10;
+		color: rgba(255, 255, 255, 0.92);
+		scroll-behavior: smooth;
 	}
 
 	body {
-		@apply border-t-8 border-t-amber-100;
+		min-height: 100vh;
 	}
 
-	main {
-		@apply text-2xl;
-	}
-
-	main p + p {
-		@apply mt-6;
-	}
-
-	main,
-	footer {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		line-height: 1.6;
-	}
-
-	h1 {
-		@apply text-4xl font-bold;
-	}
-
-	h2 {
-		@apply text-2xl font-bold;
+	::selection {
+		background: rgba(124, 58, 237, 0.35);
 	}
 
 	a {
-		@apply cursor-cool text-amber-100 underline underline-offset-4 transition-colors hover:text-teal-200;
+		@apply text-white underline decoration-white/25 underline-offset-4 transition-colors hover:decoration-white/60;
+	}
+
+	:focus-visible {
+		outline: 2px solid rgba(124, 58, 237, 0.7);
+		outline-offset: 3px;
 	}
 }

@@ -1,35 +1,35 @@
 <script>
 	import { formatDate } from '$lib/utils';
-	import Header from '$lib/components/Header.svelte';
 
 	/** @type {{ data: { posts: import('$lib/types').Posts } }} */
 	let { data } = $props();
 	const posts = data.posts;
 </script>
 
-<Header><span class="title text-amber-100">Roman's</span> Journal</Header>
+<header class="mb-10">
+	<p class="text-sm tracking-wide text-white/55">Writing</p>
+	<h1 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Journal</h1>
+	<p class="mt-4 max-w-2xl text-white/70">
+		Notes, essays, and experiments. A small archive of what I’m thinking about — and what I’m
+		learning.
+	</p>
+</header>
 
-<p
-	class="mb-8 rounded-xl border border-amber-100
-  p-8"
->
-	A new beginning ✨ ... I did write more content in the past. Had it across many different tools.
-	But I always struggled with these tools to keep up with my individual requirements. (And my
-	consistency 🙈)<br /><br />
-	<em>Now I'll give it a fresh shot, with a self rolled blog. 🚀</em> <br /><br />If I bring back
-	old content, it should bring along a updated perspective. So please enjoy all new content starting
-	with 2025. 🙇🏼‍♂️
+<p class="mb-10 rounded-2xl border border-white/10 bg-white/5 p-8 text-white/70">
+	A fresh start. I’ve written across many tools before, but keeping things consistent never really
+	stuck. This journal is deliberately simple so I can keep publishing without friction.
 </p>
 
 {#snippet article(/** @type {import('$lib/types').Post} */ post)}
 	<article
-		class="mb-8 cursor-help rounded-xl border border-white/10 p-8 shadow transition-shadow
-				hover:bg-white/10 hover:shadow-2xl"
+		class="mb-6 rounded-2xl border border-white/10 bg-white/5 p-8 transition-colors hover:bg-white/10"
 	>
-		<h2>{post.title}</h2>
-		<p class="text-sm text-amber-100 italic">{formatDate(post.date)}</p>
-		<p>{post.description}</p>
-		<a href="/journal/{post.slug}">Read the article</a>
+		<h2 class="text-2xl font-medium tracking-tight text-white">{post.title}</h2>
+		<p class="mt-2 text-sm text-white/50">{formatDate(post.date)}</p>
+		<p class="mt-4 text-white/70">{post.description}</p>
+		<a href="/journal/{post.slug}" class="mt-5 inline-block text-sm text-white/85">
+			Read article
+		</a>
 	</article>
 {/snippet}
 
