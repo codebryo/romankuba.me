@@ -3,14 +3,14 @@
 
 	const socials = [
 		{
-			key: 'Bluesky',
-			href: 'https://bsky.app/profile/romankuba.me',
-			text: 'bsky.app/profile/romankuba.me'
-		},
-		{
 			key: 'LinkedIn',
 			href: 'https://www.linkedin.com/in/romankuba/',
 			text: 'in/romankuba'
+		},
+		{
+			key: 'Bluesky',
+			href: 'https://bsky.app/profile/romankuba.me',
+			text: 'bsky.app/profile/romankuba.me'
 		}
 	];
 </script>
@@ -121,31 +121,31 @@
 <section id="writing" class="mt-20 border-t border-white/10 pt-16">
 	<h2 class="text-lg font-medium text-white">Writing</h2>
 	<p class="mt-4 max-w-2xl text-white/70">
-		I publish longer thoughts in the <a href="/journal">journal</a> and keep shorter notes on social.
+		I publish most content on LinkedIn, and share personal thoughts in the <a href="/journal"
+			>journal</a
+		>.
 	</p>
 	<div class="mt-8 flex flex-wrap gap-3">
+		<a
+			href="https://www.linkedin.com/in/romankuba/"
+			target="_blank"
+			rel="noreferrer"
+			class="rounded-full border border-white/15 bg-transparent px-4 py-2 text-sm text-white/85 no-underline hover:bg-white/5"
+		>
+			LinkedIn
+		</a>
 		<a
 			href="/journal"
 			class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white no-underline hover:bg-white/10"
 		>
 			Open journal
 		</a>
-		<a
-			href="https://bsky.app/profile/romankuba.me"
-			target="_blank"
-			rel="noreferrer"
-			class="rounded-full border border-white/15 bg-transparent px-4 py-2 text-sm text-white/85 no-underline hover:bg-white/5"
-		>
-			Bluesky
-		</a>
 	</div>
 </section>
 
-<section id="contact" class="mt-20 border-t border-white/10 pt-16">
+<!-- <section id="contact" class="mt-20 border-t border-white/10 pt-16">
 	<h2 class="text-lg font-medium text-white">Contact</h2>
-	<p class="mt-4 max-w-2xl text-white/70">
-		Best place to reach me is via LinkedIn or Bluesky. For code, I’m most active on GitHub.
-	</p>
+	<p class="mt-4 max-w-2xl text-white/70">Best place to reach me is via LinkedIn.</p>
 	<div class="mt-8 grid gap-3 text-sm">
 		{#each socials as social}
 			<a
@@ -159,4 +159,4 @@
 			</a>
 		{/each}
 	</div>
-</section>
+</section> -->

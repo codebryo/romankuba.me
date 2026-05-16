@@ -52,6 +52,12 @@
 		@apply text-white underline decoration-white/25 underline-offset-4 transition-colors hover:decoration-white/60;
 	}
 
+	main a {
+		cursor:
+			url('/cursor-circle.svg') 30 30,
+			auto;
+	}
+
 	:focus-visible {
 		outline: 2px solid rgba(124, 58, 237, 0.7);
 		outline-offset: 3px;

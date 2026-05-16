@@ -24,8 +24,8 @@
 				<a href="/#about" class="hover:text-white">About</a>
 				<a href="/#work" class="hover:text-white">Work</a>
 				<a href="/#writing" class="hover:text-white">Writing</a>
-				<a href="/#contact" class="hover:text-white">Contact</a>
-				<a href="/journal" class="hover:text-white">Journal</a>
+				<!-- <a href="/#contact" class="hover:text-white">Contact</a> -->
+				<!-- <a href="/journal" class="hover:text-white">Journal</a> -->
 			</nav>
 		</div>
 	</header>
