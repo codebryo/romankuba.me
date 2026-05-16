@@ -40,7 +40,3 @@
 		<data.content />
 	</div>
 </article>
-
-<style>
-	@reference "../../../app.css";
-</style>

@@ -3,28 +3,39 @@ import { mdsvex, escapeSvelte } from 'mdsvex';
 import { createHighlighter } from 'shiki'; // cspell:disable-line
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
+let highlighterPromise;
+
+async function getHighlighter() {
+	if (!highlighterPromise) {
+		highlighterPromise = createHighlighter({
+			themes: ['catppuccin-frappe'], // cspell:disable-line
+			langs: ['javascript', 'typescript', 'dotenv', 'shellscript', 'json', 'html']
+		});
+	}
+
+	return highlighterPromise;
+}
+
 const mdsvexOptions = {
 	extensions: ['.md'],
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
-			const highlighter = await createHighlighter({
-				themes: ['catppuccin-frappe'], // cspell:disable-line
-				langs: ['javascript', 'typescript', 'dotenv', 'shellscript', 'json', 'html']
-			});
-			await highlighter.loadLanguage(
-				'javascript',
-				'typescript',
-				'dotenv',
-				'shellscript',
-				'json',
-				'html'
-			);
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'catppuccin-frappe' })); // cspell:disable-line
+			const highlighter = await getHighlighter();
+			let html;
+
+			try {
+				html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'catppuccin-frappe' })); // cspell:disable-line
+			} catch {
+				html = escapeSvelte(
+					highlighter.codeToHtml(code, { lang: 'text', theme: 'catppuccin-frappe' })
+				); // cspell:disable-line
+			}
+
 			return `{@html \`${html}\` }`;
 		}
 	},
 	layout: {
-		_: './src/mdsvex.svelte'
+		_: 'src/mdsvex.svelte'
 	}
 };
 
